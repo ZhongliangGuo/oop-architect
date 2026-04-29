@@ -8,7 +8,7 @@ Use when the user wants to design a new feature before coding it. CLAUDE.md exis
 
 2. **Design** the new components using the same OOP thinking as Phase 1 Step 2 — identify extension points, define interfaces, keep single responsibility.
 
-3. **Add to CLAUDE.md**:
+3. **Read** `references/uml-class.md`, then **add to CLAUDE.md**:
    - New classes → add to class diagram with dashed relationships (`..>`, `..|>`) marked 🔲
    - Add to progress table as 🔲 Not Started
    - Add to directory structure with `[not created]`

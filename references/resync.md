@@ -4,7 +4,7 @@ Use when the user explicitly requests a full resync — after pulling a large br
 
 ## Steps
 
-1. **Read** the current CLAUDE.md to understand the existing architecture and preserve all special notes, design decisions, and constraints.
+1. **Read** `references/uml-class.md` (needed to format updated class diagrams correctly), then read the current CLAUDE.md to understand the existing architecture and preserve all special notes, design decisions, and constraints.
 
 2. **Scan** the project's source files to discover:
    - All classes/structs/interfaces — attributes, methods, full signatures

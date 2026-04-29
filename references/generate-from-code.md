@@ -11,11 +11,12 @@ Use when code exists but CLAUDE.md does not. Goal: produce a CLAUDE.md that accu
 
 2. **Infer design intent** where the code implies it — if an abstract base and multiple concrete subclasses exist, note the extension point and likely pattern in Design Decisions. Don't over-interpret; only note what's clearly intentional.
 
-3. **Decide which additional diagrams to generate**, based on what the code reveals:
-   - Clear call flows between layers (controllers → services → repositories) → read `references/uml-sequence.md` and generate sequence diagrams for key workflows
-   - Multiple distinct modules or packages → read `references/uml-component.md` and generate a component diagram
-   - Classes with `status`/`state` fields or explicit transition logic → read `references/uml-state.md` and generate a state diagram
-   - ORM models or non-trivial data schema → read `references/uml-er.md` and generate an ER diagram
+3. **Load diagram references** based on what the code reveals:
+   - Always → read `references/uml-class.md`
+   - Clear call flows between layers (controllers → services → repositories) → read `references/uml-sequence.md`
+   - Multiple distinct modules or packages → read `references/uml-component.md`
+   - Classes with `status`/`state` fields or explicit transition logic → read `references/uml-state.md`
+   - ORM models or non-trivial data schema → read `references/uml-er.md`
 
 4. **Generate CLAUDE.md** using `references/claude-md-template.md`. All existing code is ✅ or 🔶 (partial) — nothing is 🔲 since it already exists.
 

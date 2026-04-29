@@ -32,3 +32,4 @@ classDiagram
 - C#: `throw new NotImplementedException()`
 - Kotlin: `TODO()` or `throw NotImplementedError()`
 - Abstract methods and interface methods always count as 🔲 in the concrete subclass until overridden
+- `// TODO` with no real implementation below it

@@ -26,3 +26,9 @@ classDiagram
 - Include `async`, `throws` in method signatures
 - Note `@Sendable`, `@MainActor`, actor isolation in special notes
 - Use `<<struct>>` for value types
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- `fatalError("not implemented")`
+- `preconditionFailure("not implemented")`
+- Protocol methods with no conforming implementation in a concrete type
+- Empty method bodies with no logic

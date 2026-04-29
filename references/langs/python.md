@@ -20,3 +20,9 @@ classDiagram
 - Dunder methods: include `__init__`, `__repr__`, `__eq__` if architecturally significant
 - Decorators: note `@property`, `@staticmethod`, `@classmethod` in special notes when relevant
 - Dataclasses: mark with `<<dataclass>>` stereotype
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- `pass` as entire method body
+- `raise NotImplementedError` or `raise NotImplementedError("...")`
+- `...` (Ellipsis) as entire method body
+- `# TODO` with no real implementation below it

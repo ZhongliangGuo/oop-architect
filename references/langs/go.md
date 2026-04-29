@@ -32,3 +32,9 @@ classDiagram
 - Exported (public) = `+` (capitalized in Go), unexported (private) = `-` (lowercase in Go)
 - Always include `error` in return types where relevant (Go's multi-return pattern)
 - Note pointer vs value receivers in special notes
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- `panic("not implemented")`
+- Function body that only returns zero values with no logic (e.g., `return nil, nil`)
+- `// TODO` with no real implementation below it
+- Interface methods with no concrete struct implementing them yet

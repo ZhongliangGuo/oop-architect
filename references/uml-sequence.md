@@ -17,6 +17,44 @@ sequenceDiagram
     S-->>C: Result
 ```
 
-- Solid arrows (`->>`) = implemented calls
-- Dashed arrows (`-->>`) = return values or unimplemented flows
-- Use `Note over X` to annotate unimplemented steps
+**Arrow semantics (these are fixed Mermaid conventions — do not mix them up):**
+- `->>`: any call or message, implemented or planned
+- `-->>`: return value or response
+- To mark a step as unimplemented, add a `Note over` annotation — do NOT use arrow style for this:
+
+```
+sequenceDiagram
+    C->>S: processRequest(data)
+    Note over S: 🔲 not implemented
+    S-->>C: result
+```
+
+**Common control blocks:**
+
+```
+sequenceDiagram
+    %% loop
+    loop retry up to 3 times
+        S->>R: save(entity)
+        R-->>S: result
+    end
+
+    %% conditional
+    alt success
+        S-->>C: 200 OK
+    else failure
+        S-->>C: 500 Error
+    end
+
+    %% optional path
+    opt cache miss
+        S->>DB: query(key)
+    end
+
+    %% parallel
+    par notify email
+        S->>Email: send()
+    and notify sms
+        S->>SMS: send()
+    end
+```

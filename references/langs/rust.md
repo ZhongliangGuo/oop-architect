@@ -26,3 +26,9 @@ classDiagram
 - Note lifetime parameters in special notes when architecturally significant
 - Note `Clone`, `Send`, `Sync` trait bounds in special notes
 - Use `<<enum>>` for Rust enums (algebraic data types, not simple enums)
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- `todo!()`
+- `unimplemented!()`
+- `panic!("not implemented")`
+- Trait methods with no `impl` block for a given struct

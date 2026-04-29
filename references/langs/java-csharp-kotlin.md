@@ -26,3 +26,9 @@ classDiagram
 - Generics: use Mermaid's `~T~` syntax (e.g., `Map~String, Object~`)
 - Kotlin: note `data class`, `sealed class`, `companion object` in stereotypes or notes
 - C#: note `async`/`Task<T>` return types, `IDisposable` implementations
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- Java: `throw new UnsupportedOperationException()`
+- C#: `throw new NotImplementedException()`
+- Kotlin: `TODO()` or `throw NotImplementedError()`
+- Abstract methods and interface methods always count as 🔲 in the concrete subclass until overridden

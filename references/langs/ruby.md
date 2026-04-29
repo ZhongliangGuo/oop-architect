@@ -24,3 +24,9 @@ classDiagram
 - Ruby is dynamically typed; types in UML represent expected/documented types
 - `attr_reader`, `attr_writer`, `attr_accessor` can be noted in special notes
 - Note metaprogramming usage in special notes
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- `raise NotImplementedError`
+- `raise NotImplementedError, "#{self.class}##{__method__} is not implemented"`
+- Empty method body with no logic
+- `# TODO` with no implementation below it

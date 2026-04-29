@@ -28,3 +28,9 @@ classDiagram
 - Note smart pointer types (`unique_ptr`, `shared_ptr`) — these are architectural decisions
 - Note `const`, `noexcept`, `override` where significant
 - Note rule-of-five implications in special notes
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- Pure virtual methods (`= 0`) — always 🔲 in concrete subclasses until overridden
+- Empty method body `{}` with no logic
+- `throw std::runtime_error("not implemented")` or similar
+- `// TODO` with no implementation below it

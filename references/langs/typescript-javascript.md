@@ -24,3 +24,9 @@ classDiagram
 - For JS (no interfaces): use `<<abstract>>` classes or note "duck typing" in notes
 - Note `readonly` properties in special notes
 - Private fields: use `#field` (ES2022 private) or `_field` (convention)
+
+**Stub patterns — mark method as 🔲 (not started) or 🔶 (partial):**
+- `throw new Error("not implemented")` or similar message
+- Empty function body `{}` with no logic
+- `// TODO` with no implementation below it
+- Abstract methods in TypeScript abstract classes always count as 🔲 in concrete subclasses until overridden

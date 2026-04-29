@@ -42,6 +42,12 @@ Assess the situation, then read the corresponding reference:
 | Yes | Yes, user wants to add a feature | **Phase 4** — Read `references/extend-design.md` |
 | Yes | Yes, code has changed | **Phase 2** — Read `references/resync.md` |
 
+**Phase 2 vs Phase 4 disambiguation** — when CLAUDE.md exists and both could apply, use these signals:
+
+- User describes something new to build ("add X", "design Y", "I want to implement Z") → **Phase 4**
+- User mentions drift, scanning, or syncing ("resync", "update CLAUDE.md", "scan the project", "things have changed") → **Phase 2**
+- User says something ambiguous ("let's continue", "keep going", "what's next") → **ask**: "Do you want to design a new feature, or sync the architecture with the current state of the code?"
+
 ### Check C: Load language reference
 
 Detect the primary language from file extensions, imports, or user statement. Read the matching file before generating any UML. If the language is not listed, read `references/langs/generic.md`.

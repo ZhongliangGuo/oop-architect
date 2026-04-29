@@ -1,6 +1,6 @@
 # OOP Architect
 
-[中文文档](README.zh.md)
+English | [中文](README.zh.md)
 
 A [Claude Code](https://claude.ai/code) skill that designs, documents, and tracks object-oriented software architecture using live Mermaid UML diagrams inside `CLAUDE.md`.
 

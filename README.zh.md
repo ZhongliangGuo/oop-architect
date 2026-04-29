@@ -1,6 +1,6 @@
 # OOP Architect
 
-[English](README.md)
+[English](README.md) | 中文
 
 一个 [Claude Code](https://claude.ai/code) Skill，通过在 `CLAUDE.md` 中维护实时 Mermaid UML 图来设计、记录和追踪面向对象软件架构。
 

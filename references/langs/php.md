@@ -29,3 +29,4 @@ classDiagram
 - Interface methods — always 🔲 in concrete classes until implemented
 - `throw new \BadMethodCallException('Not implemented')`
 - `throw new \LogicException('Not implemented')`
+- `// TODO` with no real implementation below it

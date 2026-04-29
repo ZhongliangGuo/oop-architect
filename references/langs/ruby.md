@@ -29,4 +29,4 @@ classDiagram
 - `raise NotImplementedError`
 - `raise NotImplementedError, "#{self.class}##{__method__} is not implemented"`
 - Empty method body with no logic
-- `# TODO` with no implementation below it
+- `# TODO` with no real implementation below it

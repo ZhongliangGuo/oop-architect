@@ -32,3 +32,4 @@ classDiagram
 - `preconditionFailure("not implemented")`
 - Protocol methods with no conforming implementation in a concrete type
 - Empty method bodies with no logic
+- `// TODO` with no implementation below it

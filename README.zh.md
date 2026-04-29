@@ -33,14 +33,19 @@ Python · Java · C# · Kotlin · TypeScript · JavaScript · Go · Rust · C++ 
 
 ## 安装
 
-**项目级安装**（推荐团队使用，提交到仓库）：
+**通过 Claude Code marketplace 安装**（推荐）：
 ```bash
-git clone https://github.com/YOUR_USERNAME/oop-architect .claude/skills/oop-architect
+claude plugin marketplace add ZhongliangGuo/oop-architect
+```
+
+**项目级安装**（提交到仓库，适合团队使用）：
+```bash
+git clone https://github.com/ZhongliangGuo/oop-architect .claude/skills/oop-architect
 ```
 
 **全局安装**（所有项目可用）：
 ```bash
-git clone https://github.com/YOUR_USERNAME/oop-architect ~/.claude/skills/oop-architect
+git clone https://github.com/ZhongliangGuo/oop-architect ~/.claude/skills/oop-architect
 ```
 
 更新：

@@ -1,0 +1,20 @@
+{
+    "name": "oop-architect",
+    "description": "OOP architecture planning and progress tracking — generates self-maintaining Mermaid UML inside CLAUDE.md with implementation status (✅/🔶/🔲) on every class and method. Supports 4 modes: design from scratch, reverse-generate from code, extend existing design, resync after drift. 10 languages supported.",
+    "owner": {
+        "name": "ZhongliangGuo",
+        "url": "https://github.com/ZhongliangGuo"
+    },
+    "plugins": [
+        {
+            "name": "oop-architect",
+            "description": "OOP architecture planning and progress tracking for software projects. Generates Mermaid UML (class, sequence, component diagrams) inside CLAUDE.md with full typed signatures, visibility markers, and implementation status on every class/method/relationship.",
+            "version": "1.0.0",
+            "source": "./",
+            "author": {
+                "name": "ZhongliangGuo",
+                "url": "https://github.com/ZhongliangGuo"
+            }
+        }
+    ]
+}

@@ -33,14 +33,19 @@ Python · Java · C# · Kotlin · TypeScript · JavaScript · Go · Rust · C++ 
 
 ## Install
 
-**Per-project** (recommended for team use — committed to the repo):
+**Via Claude Code marketplace** (recommended):
 ```bash
-git clone https://github.com/YOUR_USERNAME/oop-architect .claude/skills/oop-architect
+claude plugin marketplace add ZhongliangGuo/oop-architect
+```
+
+**Per-project** (committed to the repo):
+```bash
+git clone https://github.com/ZhongliangGuo/oop-architect .claude/skills/oop-architect
 ```
 
 **Global** (available in all your projects):
 ```bash
-git clone https://github.com/YOUR_USERNAME/oop-architect ~/.claude/skills/oop-architect
+git clone https://github.com/ZhongliangGuo/oop-architect ~/.claude/skills/oop-architect
 ```
 
 To update:

@@ -58,3 +58,15 @@ sequenceDiagram
         S->>SMS: send()
     end
 ```
+
+### Workflow Status Tracking
+
+When a project has multiple key workflows, track their overall implementation status in the progress table in CLAUDE.md:
+
+| Workflow | Status | Notes |
+|---|---|---|
+| User Authentication | ✅ Complete | All steps implemented |
+| Payment Processing | 🔶 Partial | Refund flow not started |
+| Email Notification | 🔲 Not Started | — |
+
+Add this table under the sequence diagram section in CLAUDE.md. Update it the same way as the class progress table — when all `Note over` annotations in a diagram are removed (all steps implemented), the workflow is ✅ Complete.

@@ -65,7 +65,7 @@ Detect the primary language from file extensions, imports, or user statement. Re
 | PHP | `references/langs/php.md` |
 | Other | `references/langs/generic.md` |
 
-For multi-language projects, read all relevant language files.
+For multi-language projects, read all relevant language files and apply principle 8 (separate diagrams per layer).
 
 ---
 
@@ -97,6 +97,8 @@ Always read `references/uml-class.md`.
 Also read based on project needs:
 - Key workflows exist (auth, request lifecycle, multi-service calls) → read `references/uml-sequence.md`
 - Project has distinct modules/packages → read `references/uml-component.md`
+- Classes with `status`/`state` fields or explicit state machine logic → read `references/uml-state.md`
+- Data-heavy project with ORM or complex data schema → read `references/uml-er.md`
 
 ### Step 4 — Write CLAUDE.md
 
@@ -107,8 +109,10 @@ If CLAUDE.md does not already exist, read `references/claude-md-template.md` for
 ## Important Principles
 
 1. **UML is the source of truth for architecture.** Code is the source of truth for implementation. CLAUDE.md bridges them.
-2. **Keep diagrams readable.** More than 15–20 classes in one diagram → split by module.
+2. **Keep diagrams readable.** More than 15–20 classes in one diagram → split by module. Name each section after its module (`### Class Diagram — Auth`, `### Class Diagram — Payment`). Cross-module relationships go in the component diagram, not across split class diagrams.
 3. **Special notes are precious.** They capture constraints that can't be derived from code.
 4. **Status tracking enables resume.** ✅/🔶/🔲 lets anyone instantly see what's done, what's next.
 5. **Extensibility is designed, not accidental.** Abstract base methods should be needed by every subclass — if only some subclasses need it, it belongs in a mixin or separate interface.
 6. **CLAUDE.md is self-maintaining.** The generated file contains its own update rules — this skill only runs for initial planning and full resyncs.
+7. **Test code stays out of UML.** Mock classes, fakes, and test fixtures don't belong in architecture diagrams. Exception: a test double that ships as part of the production library (e.g., an in-memory adapter intended for downstream users) should be included.
+8. **Multi-language projects: separate diagrams per layer.** For a project with e.g. a Python backend and TypeScript frontend, create one class diagram per language layer and label each section clearly. Cross-language boundaries (REST API, message queue) go in the component diagram, not in class relationships. Shared data contracts (request/response schemas) go in a dedicated section using the most expressive type system available.

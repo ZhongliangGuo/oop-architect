@@ -13,8 +13,13 @@ Use when the user explicitly requests a full resync — after pulling a large br
 
 3. **Compare** discovered state against the UML in CLAUDE.md.
 
-4. **Update** the UML diagrams, progress table, and directory structure.
+4. **Resolve conflicts before updating.** If the code clearly contradicts a Design Decision (e.g., the documented pattern is absent, a stated constraint is violated, or the architecture looks fundamentally different from what's documented):
+   - Do NOT silently overwrite the Design Decision.
+   - Report the conflict to the user: "Design Decisions say X, but the code does Y. Which is correct — should I update the documentation or flag this as technical debt?"
+   - Wait for user confirmation before changing any Design Decisions or Constraints sections.
 
-5. **Preserve** all special notes, design decisions, constraints, and roadmap items — these contain human intent that can't be derived from code.
+5. **Update** the UML diagrams, progress table, and directory structure.
 
-6. **Report** what changed: e.g., "Updated ConcreteImplA: 3/6 → 5/6 methods. Added new class EventHandler. Removed deprecated CacheManager."
+6. **Preserve** all special notes, design decisions, constraints, and roadmap items that the user has confirmed — these contain human intent that can't be derived from code.
+
+7. **Report** what changed: e.g., "Updated ConcreteImplA: 3/6 → 5/6 methods. Added new class EventHandler. Removed deprecated CacheManager." Include any conflicts flagged in step 4.

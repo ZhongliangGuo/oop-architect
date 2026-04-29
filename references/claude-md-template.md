@@ -25,6 +25,15 @@ Write CLAUDE.md at the project root with this structure. Omit sections that don'
 ### Sequence Diagram — [Key Workflow Name]
 [mermaid sequence diagram — one per important workflow]
 
+### Workflow Progress
+[workflow status table — omit if only one workflow or no sequence diagrams]
+
+### State Diagram — [Entity or Workflow Name]
+[mermaid stateDiagram-v2 — omit if no state machines]
+
+### Data Model
+[mermaid erDiagram — omit if no ORM or trivial data model]
+
 ## Implementation Progress
 
 | Class | Status | Methods Done | Notes |
@@ -73,5 +82,8 @@ Update this file only when **public interfaces change** — skip internal refact
 - Relationship changed → update diagram line (solid = implemented, dashed = planned)
 - Class deleted/renamed → remove or update in diagram, table, and directory structure
 - New constraint on a class → add as `note for ClassName "..."` in diagram
+- New state or transition added → update state diagram; mark unimplemented transitions with `note right of`
+- New database entity or relationship added → update ER diagram
+- New module added → update component diagram and add a new Class Diagram section
 
 Only change what changed. Preserve all notes, design decisions, and roadmap items.

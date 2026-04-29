@@ -26,4 +26,6 @@ graph TD
     style WEB stroke-dasharray: 5 5
 ```
 
-- `stroke-dasharray: 5 5` on unimplemented components
+- `stroke-dasharray: 5 5` on unimplemented components (dashed border)
+- Partially implemented components: append status to the node label — `SVC["Service Layer<br/>🔶 partial"]`
+- Constraint annotations: add a separate note node linked with a dotted edge — `NOTE1["⚠️ Must not call DB directly"]` styled with `stroke-dasharray: 3 3`

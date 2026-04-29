@@ -22,6 +22,8 @@ When you start or return to a project, you need to instantly understand: what's 
 - **Class diagrams** with full typed signatures, visibility markers (`+` `-` `#`), and per-class implementation status (✅ complete / 🔶 partial / 🔲 not started)
 - **Sequence diagrams** for key workflows (auth, request lifecycle, etc.)
 - **Component diagrams** for multi-module projects
+- **State diagrams** for entities with explicit lifecycle or status transitions
+- **ER diagrams** for data-heavy projects with ORM or non-trivial data models
 - **Progress table**, directory structure, design decisions, and constraint notes
 - **Embedded maintenance rules** so `CLAUDE.md` stays current on its own — no skill activation needed for routine updates
 
@@ -90,9 +92,9 @@ The solution is a `CLAUDE.md` that acts as a living blueprint — Mermaid UML di
 
 Most skills load everything upfront. This skill loads only what the current task needs:
 
-- **Always loaded:** `SKILL.md` (~95 lines) + one language file (~25 lines)
-- **Phase-specific:** `references/uml-class.md`, `references/claude-md-template.md`, etc.
-- **Skipped unless needed:** sequence/component diagram rules, resync procedure, template
+- **Always loaded:** `SKILL.md` (~88 lines) + one language file (~25 lines)
+- **Phase-specific:** the matching phase reference file + `references/uml-class.md` when diagrams are written or updated
+- **Skipped unless needed:** sequence/component/state/ER diagram rules, CLAUDE.md template
 
 This keeps context usage lean across all four modes and all languages.
 
@@ -112,13 +114,16 @@ If the project is a single-file script, a one-off data transformation, or purely
 oop-architect/
 ├── SKILL.md                       # Entry point — mode detection and orchestration
 └── references/
-    ├── uml-class.md               # Class diagram rules (always loaded in Phase 1)
-    ├── uml-sequence.md            # Sequence diagram rules (loaded when needed)
-    ├── uml-component.md           # Component diagram rules (loaded when needed)
-    ├── claude-md-template.md      # CLAUDE.md template (loaded when creating new)
+    ├── new-project.md             # Design from scratch (Phase 1)
     ├── resync.md                  # Full resync procedure (Phase 2)
     ├── generate-from-code.md      # Reverse-generate from existing code (Phase 3)
     ├── extend-design.md           # Extend architecture with new feature (Phase 4)
+    ├── uml-class.md               # Class diagram rules (loaded when writing or updating diagrams)
+    ├── uml-sequence.md            # Sequence diagram rules (loaded when needed)
+    ├── uml-component.md           # Component diagram rules (loaded when needed)
+    ├── uml-state.md               # State diagram rules (loaded when needed)
+    ├── uml-er.md                  # ER diagram rules (loaded when needed)
+    ├── claude-md-template.md      # CLAUDE.md template (loaded when creating new)
     └── langs/
         ├── python.md
         ├── java-csharp-kotlin.md

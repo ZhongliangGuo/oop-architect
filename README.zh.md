@@ -22,6 +22,8 @@
 - **类图**：带完整类型签名、可见性标记（`+` `-` `#`）和每个类的实现状态（✅ 完成 / 🔶 部分完成 / 🔲 未开始）
 - **时序图**：关键工作流（认证、请求生命周期等）
 - **组件图**：多模块项目的模块依赖关系
+- **状态图**：具有明确生命周期或状态流转的实体
+- **ER 图**：使用 ORM 或数据模型较复杂的项目
 - **进度表**、目录结构、设计决策、约束说明
 - **内嵌维护规则**：让 `CLAUDE.md` 在不激活 Skill 的情况下自我更新
 
@@ -90,9 +92,9 @@ git pull
 
 大多数 Skill 会一次性把所有内容加载进上下文。这个 Skill 只加载当前任务需要的部分：
 
-- **始终加载：** `SKILL.md`（约 95 行）+ 对应语言文件（约 25 行）
-- **按阶段加载：** `references/uml-class.md`、`references/claude-md-template.md` 等
-- **不需要就不加载：** 时序图/组件图规则、resync 流程、模板文件
+- **始终加载：** `SKILL.md`（约 88 行）+ 对应语言文件（约 25 行）
+- **按阶段加载：** 对应阶段的 reference 文件 + 写入或更新图表时加载 `references/uml-class.md`
+- **不需要就不加载：** 时序图/组件图/状态图/ER 图规则、CLAUDE.md 模板
 
 这使得四种模式、所有语言下的上下文消耗都保持精简。
 
@@ -112,13 +114,16 @@ git pull
 oop-architect/
 ├── SKILL.md                       # 入口——模式检测和编排逻辑
 └── references/
-    ├── uml-class.md               # 类图规则（Phase 1 始终加载）
-    ├── uml-sequence.md            # 时序图规则（按需加载）
-    ├── uml-component.md           # 组件图规则（按需加载）
-    ├── claude-md-template.md      # CLAUDE.md 模板（新建时加载）
+    ├── new-project.md             # 从零设计（Phase 1）
     ├── resync.md                  # 全量 resync 流程（Phase 2）
     ├── generate-from-code.md      # 从已有代码反向生成文档（Phase 3）
     ├── extend-design.md           # 在现有架构上扩展新功能（Phase 4）
+    ├── uml-class.md               # 类图规则（写入或更新图表时加载）
+    ├── uml-sequence.md            # 时序图规则（按需加载）
+    ├── uml-component.md           # 组件图规则（按需加载）
+    ├── uml-state.md               # 状态图规则（按需加载）
+    ├── uml-er.md                  # ER 图规则（按需加载）
+    ├── claude-md-template.md      # CLAUDE.md 模板（新建时加载）
     └── langs/
         ├── python.md
         ├── java-csharp-kotlin.md

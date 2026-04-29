@@ -1,7 +1,7 @@
 {
     "name": "oop-architect",
     "version": "1.0.0",
-    "description": "OOP architecture planning and progress tracking for software projects. Generates Mermaid UML (class, sequence, component diagrams) inside CLAUDE.md with full typed signatures, visibility markers, and implementation status on every class/method/relationship. Triggers on: 'plan the architecture', 'design the classes', 'OOP', 'UML', 'class diagram', 'architect', /oop-architect.",
+    "description": "OOP architecture planning and progress tracking for software projects. Generates Mermaid UML (class, sequence, component, state, and ER diagrams) inside CLAUDE.md with full typed signatures, visibility markers, and implementation status on every class/method/relationship. Triggers on: 'plan the architecture', 'design the classes', 'OOP', 'UML', 'class diagram', 'architect', /oop-architect.",
     "author": {
         "name": "ZhongliangGuo",
         "url": "https://github.com/ZhongliangGuo"

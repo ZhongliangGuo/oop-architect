@@ -2,7 +2,7 @@
 name: oop-architect
 description: >
   OOP architecture planning and progress tracking for software projects. Generates Mermaid UML
-  (class, sequence, component diagrams) inside CLAUDE.md with full typed signatures, visibility
+  (class, sequence, component, state, and ER diagrams) inside CLAUDE.md with full typed signatures, visibility
   markers, implementation status on every class/method/relationship, and special notes for
   constraints. CLAUDE.md becomes a self-maintaining architecture blueprint.
   Use this skill whenever: the user starts a new project needing architecture planning; says
